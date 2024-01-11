@@ -1,11 +1,11 @@
-%global         ntfs_version 2022.5.17
+%global         ntfs_version 2022.10.3
 %global         compression_version 1.0
 
 # debuginfo makes no sense for this package, so disable it
 %global         debug_package %{nil}
 
 Name:           libguestfs-winsupport
-Version:        9.2
+Version:        9.3
 Release:        1%{?dist}
 Summary:        Add support for Windows guests to virt-v2v and virt-p2v
 
@@ -125,6 +125,11 @@ popd
 
 
 %changelog
+* Thu Aug 31 2023 Richard W.M. Jones <rjones@redhat.com> - 9.3-1
+- Rebase to ntfs-3g 2022.10.3
+- Fixes: CVE-2022-40284
+- resolves: rhbz#2236376
+
 * Mon Sep 26 2022 Richard W.M. Jones <rjones@redhat.com> - 9.2-1
 - Rebase to ntfs-3g 2022.5.17
 - Fixes: CVE-2021-46790, CVE-2022-30783, CVE-2022-30784, CVE-2022-30785,
