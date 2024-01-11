@@ -1,4 +1,4 @@
-%global         ntfs_version 2022.5.17
+%global         ntfs_version 2022.10.3
 %global         compression_version 1.0
 
 # debuginfo makes no sense for this package, so disable it
@@ -6,7 +6,7 @@
 
 Name:           libguestfs-winsupport
 Version:        8.8
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Add support for Windows guests to virt-v2v and virt-p2v
 
 URL:            https://www.tuxera.com/company/open-source/
@@ -125,6 +125,11 @@ popd
 
 
 %changelog
+* Thu Aug 31 2023 Richard W.M. Jones <rjones@redhat.com> - 8.8-2
+- Rebase to ntfs-3g 2022.10.3
+- Fixes: CVE-2022-40284
+- resolves: rhbz#2236371
+
 * Mon Sep 26 2022 Richard W.M. Jones <rjones@redhat.com> - 8.8-1
 - Rebase to ntfs-3g 2022.5.17
 - Fixes: CVE-2021-46790, CVE-2022-30783, CVE-2022-30784, CVE-2022-30785,
